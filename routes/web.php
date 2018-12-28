@@ -27,3 +27,4 @@ Route::group(['middleware' => ['auth']] ,function(){
 });
 
 Route::get('/logout','AdminController@logout')->name('admin.logout');
+bggbdbgfx
