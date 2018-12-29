@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class About extends Model
+class About_me extends Model
 {
     //
 }

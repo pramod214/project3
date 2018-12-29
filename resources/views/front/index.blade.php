@@ -191,10 +191,7 @@
                                 </ul>
                             </div>
 
-                            <div class="action pt--60">
-                                <a href="#" class="btn btn-default">Download Resume</a>
-                            </div>
-                        </div>
+                          
                         <!-- About Block End -->
                     </div>
                 </div>
@@ -439,7 +436,7 @@
                     <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="branding illustration">
                         <!-- Portfolio Item Start -->
                         <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/04.jpg')}}.jpg" alt="">
+                            <img src="{{asset('public/frontend/img/portfolio-img/04.jpg')}}" alt="">
 
                             <a href="{{asset('public/frontend/img/portfolio-img/04.jpg')}}" class="caption">
                                 <div class="vc--parent">

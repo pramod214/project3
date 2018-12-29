@@ -22,9 +22,11 @@ Route::group(['middleware' => ['auth']] ,function(){
   Route::get('/admindashboard','AdminController@dashboard')->name('admin.dashboard');
   Route::get('/adminprofile/{id}','AdminController@profile')->name('admin.profile');
   Route::post('/adminupdate/{id}','AdminController@update')->name('admin.update');
-  
 
+  // About_Me Routes
 
+  Route::get('/admin/about','AboutController@index')->name('about');
+  Route::post('/admin/about/{id}','AboutController@update')->name('about.update');
   // Slider Routes
   Route::get('/admin/slider','SliderController@index')->name('slider');
   Route::post('/admin/slider/{id}','SliderController@update')->name('slider.update');
