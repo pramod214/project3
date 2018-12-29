@@ -60,7 +60,7 @@
                                <br/>
                                <a href="{{$user->facebook}}" target="_blank" class="btn btn-circle btn-secondary"><i class="fab fa-facebook-f"></i></a>
                                <a href="{{$user->twitter}}" target="_blank"class="btn btn-circle btn-secondary"><i class="fab fa-twitter"></i></a>
-                               <a href="{{$user->linkedin}}" target="_blank"class="btn btn-circle btn-secondary"><i class="fab fa-youtube"></i></a>
+                               <a href="{{$user->linkedin}}" target="_blank"class="btn btn-circle btn-secondary"><i class="fab fa-linkedin"></i></a>
                            </div>
                        </div>
                    </div>
@@ -137,7 +137,9 @@
                                            <div class="form-group">
                                                <label class="col-md-12">About</label>
                                                <div class="col-md-12">
-                                                   <textarea rows="5" class="form-control form-control-line" name="about" value="{{$user->about}}"></textarea>
+                                                   <textarea rows="5" class="form-control form-control-line" name="about" >
+                                                     {{$user->about}}
+                                                   </textarea>
                                                </div>
                                            </div>
 

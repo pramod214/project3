@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','FrontEndController@index')->name('frontend.index');
 
 Auth::routes();
 
@@ -24,6 +22,13 @@ Route::group(['middleware' => ['auth']] ,function(){
   Route::get('/admindashboard','AdminController@dashboard')->name('admin.dashboard');
   Route::get('/adminprofile/{id}','AdminController@profile')->name('admin.profile');
   Route::post('/adminupdate/{id}','AdminController@update')->name('admin.update');
+  
+
+
+  // Slider Routes
+  Route::get('/admin/slider','SliderController@index')->name('slider');
+  Route::post('/admin/slider/{id}','SliderController@update')->name('slider.update');
 });
+
 
 Route::get('/logout','AdminController@logout')->name('admin.logout');

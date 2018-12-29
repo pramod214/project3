@@ -43,19 +43,16 @@
                     <!-- End User Profile-->
                 </li>
                 <!-- User Profile-->
-
                 <li class="sidebar-item">
-                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
-                        <i class="icon-Car-Wheel"></i>
-                        <span class="hide-menu">Dashboards </span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse  first-level">
-                        <li class="sidebar-item">
-                            <a href="index.html" class="sidebar-link">
-                                <i class="icon-Record"></i>
-                                <span class="hide-menu"> Dashboard 1 </span>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('slider')}}" aria-expanded="false">
+                                <i class="mdi mdi-content-paste"></i>
+                                <span class="hide-menu">Slider</span>
                             </a>
-                        </li>
+                </li>
+
+                
+                
+
 
             </ul>
         </nav>
