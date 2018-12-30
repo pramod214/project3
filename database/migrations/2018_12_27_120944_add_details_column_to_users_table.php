@@ -23,8 +23,6 @@ class AddDetailsColumnToUsersTable extends Migration
             $table->string('linkedin')->nullable();
 
 
-
-
         });
     }
 

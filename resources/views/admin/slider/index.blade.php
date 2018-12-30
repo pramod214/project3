@@ -61,7 +61,7 @@
 
                                    <div class="form-group">
                                        <label >Image</label>
-                                       <input type="file" class="form-control"  name="designation">
+                                       <input type="file" class="form-control"  name="image">
                                        <img src="{{asset('public/adminpanel/uploads/slider/'.$slider->image)}}" alt="" height="200px">
                                    </div>
 
@@ -130,5 +130,3 @@
         });
     </script>
 @endsection
-
-

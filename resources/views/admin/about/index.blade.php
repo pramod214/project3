@@ -43,57 +43,62 @@
                                <h4 class="card-title">About Me</h4>
 
 
-                               <form class="m-t-30" action="{{route('about.update')}}" method="post" >
+                               <form class="m-t-30" action="{{route('about.update',$about->id)}}" method="post" enctype="multipart/form-data">
                                  @csrf
                                    <div class="form-group">
                                        <label for="birthdate">Birthdate</label>
-                                       <input type="text" class="form-control" id="birthdate" name="birthdate">
+                                       <input type="text" class="form-control" id="birthdate" name="birthdate" value="{{$about->birthdate}}">
 
                                    </div>
 
                                    <div class="form-group">
                                        <label for="phone">Phone</label>
-                                       <input type="type" class="form-control" id="phone" name="phone" >
+                                       <input type="type" class="form-control" id="phone" name="phone" value="{{$about->phone}}">
                                    </div>
 
                                    <div class="form-group">
                                        <label for="details">Personal Details</label>
-                                       <textarea rows="5" class="form-control form-control-line" name="details" ></textarea>
+                                       <textarea rows="5" class="form-control form-control-line" name="details" id="details">{{$about->details}}</textarea>
                                    </div>
 
                                    <div class="form-group">
                                        <label for="email">Email</label>
-                                       <input type="type" class="form-control" id="email" name="email" >
+                                       <input type="type" class="form-control" id="email" name="email"  value="{{$about->email}}" >
                                    </div>
 
                                    <div class="form-group">
                                        <label for="skype">Skype</label>
-                                       <input type="type" class="form-control" id="skype" name="skype" >
+                                       <input type="type" class="form-control" id="skype" name="skype" value="{{$about->skype}}" >
                                    </div>
 
                                    <div class="form-group">
                                        <label for="website">Website</label>
-                                       <input type="type" class="form-control" id="website" name="website" >
+                                       <input type="type" class="form-control" id="website" name="website"  value="{{$about->website}}">
                                    </div>
 
                                    <div class="form-group">
                                        <label for="facebook">Facebook</label>
-                                       <input type="type" class="form-control" id="facebook" name="facebook" >
+                                       <input type="type" class="form-control" id="facebook" name="facebook" value="{{$about->facebook}}">
                                    </div>
 
                                    <div class="form-group">
                                        <label for="twitter">Twitter</label>
-                                       <input type="type" class="form-control" id="twitter" name="twitter" >
+                                       <input type="type" class="form-control" id="twitter" name="twitter" value="{{$about->twitter}}">
                                    </div>
 
                                    <div class="form-group">
                                        <label for="gmail">Gmail</label>
-                                       <input type="type" class="form-control" id="gmail" name="gmail" >
+                                       <input type="type" class="form-control" id="gmail" name="gmail" value="{{$about->gmail}}">
                                    </div>
 
                                    <div class="form-group">
                                        <label for="linkedin">Linked In</label>
-                                       <input type="type" class="form-control" id="linkedin" name="linkedin" >
+                                       <input type="type" class="form-control" id="linkedin" name="linkedin" value="{{$about->linkedin}}">
+                                   </div>
+
+                                   <div class="form-group">
+                                       <label for="image">Image</label>
+                                       <input type="file" class="form-control" id="image" name="image" >
                                    </div>
 
                                    <button type="submit" class="btn btn-primary">Update Info</button>

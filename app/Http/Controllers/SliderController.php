@@ -38,4 +38,3 @@ class SliderController extends Controller
       return redirect()->route('slider')->with('flash_message_info','Slider Has Been Updated');
       }
     }
-  
