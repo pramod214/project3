@@ -153,14 +153,14 @@
                                                 <i class="fa fa-phone"></i>
                                                 <span>Phone</span>
                                             </th>
-                                            <td><a href="#" class="btn-link">{{$about->phone}}</a></td>
+                                            <td><a href="tel:9844732031" class="btn-link">{{$about->phone}}</a></td>
                                         </tr>
                                         <tr>
                                             <th>
                                                 <i class="fa fa-envelope"></i>
                                                 <span>Email</span>
                                             </th>
-                                            <td><a href="#" class="btn-link">{{$about->email}}</a></td>
+                                            <td><a href="{{$about->gmail}}" class="btn-link">{{$about->email}}</a></td>
                                         </tr>
                                         <tr>
                                             <th>
@@ -182,10 +182,10 @@
 
                             <div class="social text-dark pt--30">
                                 <ul class="nav">
-                                    <li><a href="{{$about->facebook}}"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="{{$about->twitter}}"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="{{$about->gmail}}"><span class="fa fa-google-plus"></span></a></li>
-                                    <li><a href="{{$about->linkedin}}"><span class="fa fa-linkedin"></span></a></li>
+                                    <li><a href="{{$about->facebook}}" target="_blank"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="{{$about->twitter}}" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="{{$about->gmail}}" target="_blank"><span class="fa fa-google-plus"></span></a></li>
+                                    <li><a href="{{$about->linkedin}}" target="_blank"><span class="fa fa-linkedin"></span></a></li>
                                 </ul>
                             </div>
 
@@ -207,79 +207,28 @@
                 <!-- Section Title End -->
 
                 <div class="row AdjustRow" data-scroll-reveal="group">
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Service Block Start -->
-                        <div class="service--block">
-                            <div class="icon">
-                                <i class="fa fa-heart-o"></i>
-                            </div>
 
-                            <div class="title">
-                                <h3 class="h4">Amazing Design</h3>
-                            </div>
+                    @foreach($services as $service)
+                        <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                            <!-- Service Block Start -->
+                            <div class="service--block">
+                                <div class="icon">
+                                    <i class="fa {{$service->icon}}"></i>
+                                </div>
 
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit excepturi eum, consequatur quas cumque vel.</p>
+                                <div class="title">
+                                    <h3 class="h4">{{$service->name}}</h3>
+                                </div>
+
+                                <div class="desc">
+                                    <p>{{$service->body}}</p>
+                                </div>
                             </div>
+                            <!-- Service Block End -->
                         </div>
-                        <!-- Service Block End -->
-                    </div>
 
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Service Block Start -->
-                        <div class="service--block">
-                            <div class="icon">
-                                <i class="fa fa-cogs"></i>
-                            </div>
-
-                            <div class="title">
-                                <h3 class="h4">Development</h3>
-                            </div>
-
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit excepturi eum, consequatur quas cumque vel.</p>
-                            </div>
-                        </div>
-                        <!-- Service Block End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Service Block Start -->
-                        <div class="service--block">
-                            <div class="icon">
-                                <i class="fa fa-support"></i>
-                            </div>
-
-                            <div class="title">
-                                <h3 class="h4">24/7 Support</h3>
-                            </div>
-
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit excepturi eum, consequatur quas cumque vel.</p>
-                            </div>
-                        </div>
-                        <!-- Service Block End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Service Block Start -->
-                        <div class="service--block">
-                            <div class="icon">
-                                <i class="fa fa-paint-brush"></i>
-                            </div>
-
-                            <div class="title">
-                                <h3 class="h4">Redesign</h3>
-                            </div>
-
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit excepturi eum, consequatur quas cumque vel.</p>
-                            </div>
-                        </div>
-                        <!-- Service Block End -->
-                    </div>
+                    @endforeach
                 </div>
-            </div>
         </section>
         <!-- Services Section End -->
 

@@ -20,7 +20,7 @@ class CreateAboutsTable extends Migration
           $table->string('details');
           $table->string('email');
 
-          $table->string('skype');
+          $table->string('skype')->nullable();
           $table->string('website');
           $table->string('facebook');
           $table->string('twitter');

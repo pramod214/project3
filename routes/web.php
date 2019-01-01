@@ -30,6 +30,15 @@ Route::group(['middleware' => ['auth']] ,function(){
   // Slider Routes
   Route::get('/admin/slider','SliderController@index')->name('slider');
   Route::post('/admin/slider/{id}','SliderController@update')->name('slider.update');
+//  Service Route
+
+  Route::get('/admin/service/create','ServiceController@create')->name('service.create');
+  Route::post('/admin/service/store','ServiceController@store')->name('service.store');
+  Route::get('/admin/service/view','ServiceController@index')->name('service.view');
+  Route::get('/admin/service/edit/{id}','ServiceController@edit')->name('service.edit');
+  Route::post('/admin.service/update/{id}','ServiceController@update')->name('service.update');
+  Route::get('/admin/service/delete/{id}','ServiceController@delete')->name('service.delete');
+
 });
 
 
