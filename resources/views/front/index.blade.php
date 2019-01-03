@@ -734,60 +734,18 @@
                                 <h3 class="h4 text-white">Personal Skills</h3>
                             </div>
 
+                            @foreach($personalskills as $personal)
                             <!-- Skill Item Start -->
                             <div class="skill--item">
                                 <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">Hard Work</span>
-                                    <span class="skill--count float--right">80%</span>
+                                    <span class="skill--text">{{$personal->name}}</span>
+                                    <span class="skill--count float--right">{{$personal->percentage}}</span>
                                 </h4>
 
                                 <p class="skill--progress" style="width: 80%;" data-trigger="progress_bar"></p>
                             </div>
                             <!-- Skill Item End -->
-
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">Self Motivation</span>
-                                    <span class="skill--count float--right">90%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 90%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
-
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">Communication</span>
-                                    <span class="skill--count float--right">60%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 60%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
-
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">Team Work</span>
-                                    <span class="skill--count float--right">65%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 65%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
-
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">Dedication</span>
-                                    <span class="skill--count float--right">70%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 70%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
+                            @endforeach
                         </div>
                         <!-- Skills Items End -->
                     </div>
@@ -800,59 +758,18 @@
                             </div>
 
                             <!-- Skill Item Start -->
+                            @foreach($professional as $pro)
                             <div class="skill--item">
                                 <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">Photoshop</span>
-                                    <span class="skill--count float--right">80%</span>
+                                    <span class="skill--text">{{$pro->name}}</span>
+                                    <span class="skill--count float--right">{{$pro->percentage}}</span>
                                 </h4>
 
                                 <p class="skill--progress" style="width: 80%;" data-trigger="progress_bar"></p>
                             </div>
                             <!-- Skill Item End -->
+                            @endforeach
 
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">Illustrator</span>
-                                    <span class="skill--count float--right">90%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 90%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
-
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">PHP</span>
-                                    <span class="skill--count float--right">60%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 60%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
-
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">CSS3</span>
-                                    <span class="skill--count float--right">65%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 65%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
-
-                            <!-- Skill Item Start -->
-                            <div class="skill--item">
-                                <h4 class="h6 fw--400 text-white text-uppercase clearfix">
-                                    <span class="skill--text">HTML5</span>
-                                    <span class="skill--count float--right">70%</span>
-                                </h4>
-
-                                <p class="skill--progress" style="width: 70%;" data-trigger="progress_bar"></p>
-                            </div>
-                            <!-- Skill Item End -->
                         </div>
                         <!-- Skills Items End -->
                     </div>
@@ -1308,7 +1225,7 @@
                             </div>
 
                             <div class="desc">
-                                <p><a href="tel:+123123123456" class="btn-link">(+123) 123 123456</a>, <a href="tel:+123123123456" class="btn-link">(+123) 123 123456</a></p>
+                                <p><a href="{{$site->phone}}" class="btn-link">{{$site->phone}}</a></p>
                             </div>
                         </div>
                         <!-- Contact Info Block End -->
@@ -1326,7 +1243,7 @@
                             </div>
 
                             <div class="desc">
-                                <p>123 Lorem St., Ismailia, Egypt</p>
+                                <p>{{$site->location}}</p>
                             </div>
                         </div>
                         <!-- Contact Info Block End -->
@@ -1344,7 +1261,7 @@
                             </div>
 
                             <div class="desc">
-                                <p><a href="mailto:john@example.com" class="btn-link">john@example.com</a></p>
+                                <p><a href="mailto:{{$site->email}}" class="btn-link">{{$site->email}}</a></p>
                             </div>
                         </div>
                         <!-- Contact Info Block End -->

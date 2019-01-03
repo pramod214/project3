@@ -40,7 +40,7 @@ class ServiceController extends Controller
         $service->icon = strtolower($data['icon']);
         $service->body = $data['body'];
         $service->save();
-        return redirect()->route('service.view')->with('flash_message_success','Service has been inserted');
+        return redirect()->route('service.view')->with('flash_message_success','Service has been Updated');
     }
 
     public function delete($id){

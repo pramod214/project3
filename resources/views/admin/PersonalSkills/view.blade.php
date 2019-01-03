@@ -4,7 +4,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
-                <h4 class="page-title">Services</h4>
+                <h4 class="page-title">Personal Skills</h4>
                 <div class="d-flex align-items-center">
 
                 </div>
@@ -16,7 +16,7 @@
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.dashboard')}}">Home</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            <li class="breadcrumb-item active" aria-current="page">Personal Skills</li>
                         </ol>
                     </nav>
                 </div>
@@ -38,7 +38,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">All Services</h4>
+                        <h4 class="card-title">Personal Skills</h4>
                         @if(Session::has('flash_message_success'))
                             <div class="alert alert-success alert-block">
                                 <button type="button" class="close" data-dismiss="alert">x</button>
@@ -47,7 +47,7 @@
                         @endif
 
                         @if(Session::has('flash_message_info'))
-                            <div class="alert alert-primary alert-block">
+                            <div class="alert alert-info alert-block">
                                 <button type="button" class="close" data-dismiss="alert">x</button>
                                 <strong>{!! session('flash_message_info') !!}</strong>
                             </div>
@@ -59,36 +59,35 @@
                                 <strong>{!! session('flash_message_danger') !!}</strong>
                             </div>
                         @endif
+
                         <div class="table-responsive">
                             <table id="zero_config" class="table table-striped table-bordered">
                                 <thead>
                                 <tr>
                                     <th>S.N</th>
                                     <th>Name</th>
-                                    <th>Icon</th>
-                                    <th>Body</th>
+                                    <th>Percentage</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($services as $service)
+                                @foreach($personalskills as $ps)
                                     <tr>
                                         <td>{{$loop->index +1}}</td>
-                                        <td>{{$service->name}}</td>
-                                        <th>
-                                            <i class="fa {{$service->icon}}"></i>
-                                        </th>
-                                        <th>{{$service->body}}</th>
-                                        <th>
-                                            <a href="{{route('service.edit',$service->id)}}" class="btn btn-primary">
+                                        <td>{{$ps->name}}</td>
+                                        <td>{{$ps->percentage}}</td>
+                                        <td>
+                                            <a href="{{route('personalskills.edit', $ps->id)}}" class="btn btn-primary">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a id="delete_service" href="{{route('service.delete',$service->id)}}" class="btn btn-danger">
+
+                                            <a id="delete_personalskills" href="{{route('personalskills.delete', $ps->id)}}" class="btn btn-danger">
                                                 <i class="fa fa-trash"></i>
                                             </a>
-                                        </th>
+                                        </td>
                                     </tr>
-                                @endforeach
+                                    @endforeach
+
                                 </tbody>
 
                             </table>
@@ -102,7 +101,6 @@
     </div>
 @endsection
 
-
 @section('style')
     <link href="{{asset('public/adminpanel/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css')}}" rel="stylesheet">
 @endsection
@@ -112,12 +110,18 @@
     <script src="{{asset('public/adminpanel/dist/js/pages/datatable/datatable-basic.init.js')}}"></script>
     <script>
         $(document).ready(function () {
-            $("#delete_service").click(function(){
-               if(confirm('Are You Sure to delete')){
-                   return true;
-               }
-               return false;
-            });
-        });
+    $("#delete_personalskills").click(function(){
+    if(confirm('Are You Sure to delete')){
+    return true;
+    }
+    return false;
+    });
+    });
     </script>
-       @endsection
+
+
+
+@endsection
+
+
+
