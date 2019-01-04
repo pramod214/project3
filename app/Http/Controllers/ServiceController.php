@@ -34,7 +34,7 @@ class ServiceController extends Controller
 
     public function update(Request $request,$id){
         $service = Service::findOrFail($id);
-        $service = new Service;
+
         $data = $request->all();
         $service->name = ucwords(strtolower($data['name']));
         $service->icon = strtolower($data['icon']);

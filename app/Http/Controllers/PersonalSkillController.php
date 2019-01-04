@@ -32,7 +32,7 @@ class PersonalSkillController extends Controller
 
     public function update(Request $request,$id){
         $personalskills = Personalskills::findOrFail($id);
-        $personalskills = new Personalskills();
+
         $data = $request->all();
         $personalskills->name = ucwords(strtolower($data['name']));
         $personalskills->percentage = $data['percentage'];

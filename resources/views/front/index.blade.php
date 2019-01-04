@@ -739,10 +739,10 @@
                             <div class="skill--item">
                                 <h4 class="h6 fw--400 text-white text-uppercase clearfix">
                                     <span class="skill--text">{{$personal->name}}</span>
-                                    <span class="skill--count float--right">{{$personal->percentage}}</span>
+                                    <span class="skill--count float--right">{{$personal->percentage}}%</span>
                                 </h4>
 
-                                <p class="skill--progress" style="width: 80%;" data-trigger="progress_bar"></p>
+                                <p class="skill--progress" style="width: {{$personal->percentage}}%;" data-trigger="progress_bar"></p>
                             </div>
                             <!-- Skill Item End -->
                             @endforeach
@@ -765,7 +765,7 @@
                                     <span class="skill--count float--right">{{$pro->percentage}}</span>
                                 </h4>
 
-                                <p class="skill--progress" style="width: 80%;" data-trigger="progress_bar"></p>
+                                <p class="skill--progress" style="width: {{$pro->percentage}};" data-trigger="progress_bar"></p>
                             </div>
                             <!-- Skill Item End -->
                             @endforeach
@@ -887,20 +887,21 @@
                     <h2 class="h2 text-uppercase">Meet My Team</h2>
                 </div>
                 <!-- Section Title End -->
-
                 <div class="row AdjustRow">
+                    @foreach($team as $t)
+
                     <div class="col-md-4 col-xs-12 pb--60">
                         <!-- Team Member Item Start -->
                         <div class="team--member" data-scroll-reveal="bottom">
                             <div class="img">
-                                <img src="{{asset('public/frontend/img/team-img/member-01.jpg')}}" alt="">
+                                <img src="{{asset('public/adminpanel/uploads/team/'.$t->image)}}" alt="">
                             </div>
 
                             <div class="caption">
                                 <div class="vc--parent">
                                     <div class="vc--child">
                                         <div class="name">
-                                            <h3 class="h3 fw--400">Mike Jones</h3>
+                                            <h3 class="h3 fw--400">{{$t->name}}</h3>
                                         </div>
 
                                         <div class="company ff--primary">
@@ -918,72 +919,13 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Team Member Item End -->
                     </div>
 
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Team Member Item Start -->
-                        <div class="team--member" data-scroll-reveal="bottom">
-                            <div class="img">
-                                <img src="{{asset('public/frontend/img/team-img/member-02.jpg')}}" alt="">
-                            </div>
 
-                            <div class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <div class="name">
-                                            <h3 class="h3 fw--400">Jack Roberts</h3>
-                                        </div>
+                    @endforeach
 
-                                        <div class="company ff--primary">
-                                            <p>ThemeLooks</p>
-                                        </div>
-
-                                        <div class="social">
-                                            <ul class="nav">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Team Member Item End -->
-                    </div>
-
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Team Member Item Start -->
-                        <div class="team--member" data-scroll-reveal="bottom">
-                            <div class="img">
-                                <img src="{{asset('public/frontend/img/team-img/member-03.jpg')}}" alt="">
-                            </div>
-
-                            <div class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <div class="name">
-                                            <h3 class="h3 fw--400">Dennis Murray</h3>
-                                        </div>
-
-                                        <div class="company ff--primary">
-                                            <p>ThemeLooks</p>
-                                        </div>
-
-                                        <div class="social">
-                                            <ul class="nav">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Team Member Item End -->
-                    </div>
                 </div>
             </div>
         </section>

@@ -34,7 +34,7 @@ class ProfessionalSkillController extends Controller
 
     public function update(Request $request,$id){
         $professional = Professionalskill::findOrFail($id);
-        $professional = new Professionalskill();
+
         $data = $request->all();
         $professional->name = ucwords(strtolower($data['name']));
         $professional->percentage = $data['percentage'];

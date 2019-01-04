@@ -6,6 +6,7 @@ use App\Personalskills;
 use App\Professionalskill;
 use App\Service;
 use App\Site;
+use App\Team;
 use Illuminate\Http\Request;
 use App\Slider;
 use App\About;
@@ -19,6 +20,7 @@ class FrontEndController extends Controller
       $personalskills = Personalskills::latest()->get();
       $professional = Professionalskill::latest()->get();
       $site = Site::first();
-      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site'));
+      $team = Team::latest()->get();
+      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site' , 'team'));
     }
 }

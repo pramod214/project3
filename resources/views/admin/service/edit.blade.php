@@ -33,7 +33,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Slider</h4>
+                                <h4 class="card-title">Services</h4>
                                 @if(Session::has('flash_message_success'))
                                     <div class="alert alert-success" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="text-success">x</span></button>

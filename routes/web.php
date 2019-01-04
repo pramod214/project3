@@ -58,6 +58,22 @@ Route::group(['middleware' => ['auth']] ,function(){
 //    SiteController Route
     Route::get('/admin/site','SiteController@index')->name('site');
     Route::post('/admin/site/update/{id}','SiteController@update')->name('site.update');
+
+//    Team Route
+    Route::get('/admin/team/create','TeamController@create')->name('team.create');
+    Route::post('/admin/team/store','TeamController@store')->name('team.store');
+    Route::get('/admin/team/view','TeamController@view')->name('team.view');
+    Route::get('/admin/team/edit/{id}','TeamController@edit')->name('team.edit');
+    Route::post('/admin/team/update/{id}','TeamController@update')->name('team.update');
+    Route::get('/admin/team/delete/{id}','TeamController@delete')->name('team.delete');
+
+    // Portfolio Routes
+    Route::get('/admin/portfolio/category/create', 'PortfolioController@createCategory')->name('createCategory');
+    Route::post('/admin/portfolio/category/store', 'PortfolioController@storeCategory')->name('storeCategory');
+    Route::get('/admin/portfolio/category/view', 'PortfolioController@viewCategory')->name('viewCategory');
+    Route::get('/admin/portfolio/category/edit/{id}', 'PortfolioController@editCategory')->name('editCategory');
+    Route::post('/admin/portfolio/category/update/{id}', 'PortfolioController@updateCategory')->name('updateCategory');
+    Route::get('/admin/delete-category/{id}', 'PortfolioController@deleteCategory')->name('deleteCategory');
 });
 
 

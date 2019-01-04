@@ -41,11 +41,11 @@
                                     </div>
                                 @endif
 
-                                <form class="m-t-30" action="{{route('professionalskills.store')}}" method="post" id="add_professionalskills">
+                                <form class="m-t-30" action="{{route('professionalskills.store')}}" method="post" id="add_skils">
                                     @csrf
                                     <div class="form-group">
                                         <label for="name">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" >
+                                        <input type="text" class="form-control" id="name" name="name">
 
                                     </div>
 
@@ -80,7 +80,7 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#addd_professionalskills").validate({
+            $("#add_skils").validate({
                 rules: {
                     name: {
                         required:true
