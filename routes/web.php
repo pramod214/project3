@@ -83,6 +83,15 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::get('/admin/portfolio/edit/{id}','PortfolioCategoryController@editPortfolio')->name('editPortfolio');
     Route::post('/admin/portfolio/update/{id}','PortfolioCategoryController@updatePortfolio')->name('updatePortfolio');
     Route::get('/admin/delete-portfolio/{id}','PortfolioCategoryController@deletePortfolio')->name('deletePortfolio');
+
+    //    Portfolio Routes
+    Route::get('/admin/resume/create','ResumeController@createResume')->name('createResume');
+    Route::post('/admin/resume/store','ResumeController@storeResume')->name('storeResume');
+    Route::get('/admin/resume/view','ResumeController@viewResume')->name('viewResume');
+    Route::get('/admin/resume/edit/{id}','ResumeController@editResume')->name('editResume');
+    Route::post('/admin/resume/update/{id}','ResumeController@updateResume')->name('updateResume');
+    Route::get('/admin/delete-resume/{id}','ResumeController@deleteResume')->name('deleteResume');
+
 });
 
 

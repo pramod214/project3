@@ -7,6 +7,7 @@ use App\Personalskills;
 use App\Portfolio;
 use App\PortfolioCategory;
 use App\Professionalskill;
+use App\Resume;
 use App\Service;
 use App\Site;
 use App\Team;
@@ -27,7 +28,8 @@ class FrontEndController extends Controller
       $categories = PortfolioCategory::all();
       $ports = Portfolio::all();
       $blogs = Blog::latest()->get();
-      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site' , 'team', 'categories', 'ports', 'blogs'));
+      $resumes = Resume::latest()->get();
+      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site' , 'team', 'categories', 'ports', 'blogs' , 'resumes'));
     }
 
     public function blog($id){

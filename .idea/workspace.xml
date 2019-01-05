@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa5c350c-7481-4e27-8ba4-d71f9a4b265e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontEndController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontEndController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PortfolioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/PortfolioCategory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_04_065754_create_portfolio_categories_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ProfessionalSkills/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ProfessionalSkills/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ProfessionalSkills/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ProfessionalSkills/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/portfolio/createCategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/portfolioCategory/createCategory.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/portfolio/editCategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/portfolioCategory/editCategory.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/portfolio/viewCategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/portfolioCategory/viewCategory.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/service/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/service/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/service/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/service/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,26 +31,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/service/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/front/blog.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="160" column="179" selection-start-line="160" selection-start-column="179" selection-end-line="160" selection-end-column="179" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -226,8 +193,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="212" />
-    <option name="y" value="-9" />
+    <option name="x" value="211" />
+    <option name="y" value="-10" />
     <option name="width" value="1750" />
     <option name="height" value="995" />
   </component>
@@ -239,112 +206,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="portfolioCategory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="team" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project3" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ecommerce" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -388,11 +256,12 @@
       <workItem from="1546514682869" duration="6889000" />
       <workItem from="1546584332702" duration="9017000" />
       <workItem from="1546603329222" duration="5192000" />
+      <workItem from="1546659281213" duration="1432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74389000" />
+    <option name="totallyTimeSpent" value="75821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,9 +274,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31275168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31744966" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -785,17 +653,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/service/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/front/blog.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        <state relative-caret-position="228">
+          <caret line="160" column="179" selection-start-line="160" selection-start-column="179" selection-end-line="160" selection-end-column="179" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/blog.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/service/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="160" column="179" selection-start-line="160" selection-start-column="179" selection-end-line="160" selection-end-column="179" />
+        <state relative-caret-position="395">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
         </state>
       </provider>
     </entry>

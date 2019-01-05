@@ -304,6 +304,7 @@
 
                     <!-- Timeline Items Start -->
                     <ul class="timeline--items nav">
+                        @foreach($resumes as $resume)
                         <li>
                             <!-- Timeline Item Start -->
                             <div class="timeline--item">
@@ -314,19 +315,19 @@
                                 <table class="table" data-scroll-reveal="bottom">
                                     <tr>
                                         <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
+                                            <p class="date bg-primary">{{$resume->date}}</p>
 
                                             <div class="bottom">
-                                                <h4 class="name h6 fw--700">Academy of Fine Arts</h4>
+                                                <h4 class="name h6 fw--700">{{$resume->name}}</h4>
 
-                                                <p class="institute ff--primary">Master of Arts</p>
+                                                <p class="institute ff--primary">{{$resume->qualification}}</p>
 
-                                                <p class="location fs--12">Tokyo, Japan</p>
+                                                <p class="location fs--12">{{$resume->address}}</p>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
+                                                <p>{{$resume->body}}</p>
                                             </div>
                                         </td>
                                     </tr>
@@ -334,96 +335,8 @@
                             </div>
                             <!-- Timeline Item End -->
                         </li>
-                        <li>
-                            <!-- Timeline Item Start -->
-                            <div class="timeline--item">
-                                <div class="icon bg-default">
-                                    <i class="fa fa-graduation-cap"></i>
-                                </div>
+                            @endforeach
 
-                                <table class="table" data-scroll-reveal="bottom">
-                                    <tr>
-                                        <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
-
-                                            <div class="bottom">
-                                                <h4 class="name h6 fw--700">Academy of Fine Arts</h4>
-
-                                                <p class="institute ff--primary">Master of Arts</p>
-
-                                                <p class="location fs--12">Tokyo, Japan</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <!-- Timeline Item End -->
-                        </li>
-                        <li>
-                            <!-- Timeline Item Start -->
-                            <div class="timeline--item">
-                                <div class="icon bg-default">
-                                    <i class="fa fa-graduation-cap"></i>
-                                </div>
-
-                                <table class="table" data-scroll-reveal="bottom">
-                                    <tr>
-                                        <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
-
-                                            <div class="bottom">
-                                                <h4 class="name h6 fw--700">Academy of Fine Arts</h4>
-
-                                                <p class="institute ff--primary">Master of Arts</p>
-
-                                                <p class="location fs--12">Tokyo, Japan</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <!-- Timeline Item End -->
-                        </li>
-                        <li>
-                            <!-- Timeline Item Start -->
-                            <div class="timeline--item">
-                                <div class="icon bg-default">
-                                    <i class="fa fa-graduation-cap"></i>
-                                </div>
-
-                                <table class="table" data-scroll-reveal="bottom">
-                                    <tr>
-                                        <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
-
-                                            <div class="bottom">
-                                                <h4 class="name h6 fw--700">Academy of Fine Arts</h4>
-
-                                                <p class="institute ff--primary">Master of Arts</p>
-
-                                                <p class="location fs--12">Tokyo, Japan</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <!-- Timeline Item End -->
-                        </li>
                     </ul>
                     <!-- Timeline Items End -->
                 </div>
