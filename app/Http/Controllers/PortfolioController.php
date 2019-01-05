@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\PortfolioCategory;
 use Illuminate\Http\Request;
+use App\PortfolioCategory;
 
 class PortfolioController extends Controller
 {
     public function createCategory()
     {
-        return view('admin.portfolio.createCategory');
+        return view('admin.portfolioCategory.createCategory');
     }
 
     public function storeCategory(Request $request)
@@ -24,12 +24,12 @@ class PortfolioController extends Controller
 
     public function viewCategory(){
         $categories = PortfolioCategory::all();
-        return view ('admin.portfolio.viewCategory')->with(compact('categories'));
+        return view ('admin.portfolioCategory.viewCategory')->with(compact('categories'));
     }
 
     public function editCategory($id){
         $cat = PortfolioCategory::findOrFail($id);
-        return view ('admin.portfolio.editCategory', compact('cat'));
+        return view ('admin.portfolioCategory.editCategory', compact('cat'));
     }
     public function updateCategory(Request $request, $id){
         $category = PortfolioCategory::findOrFail($id);

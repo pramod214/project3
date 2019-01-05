@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use App\Personalskills;
+use App\Portfolio;
+use App\PortfolioCategory;
 use App\Professionalskill;
 use App\Service;
 use App\Site;
@@ -21,6 +24,17 @@ class FrontEndController extends Controller
       $professional = Professionalskill::latest()->get();
       $site = Site::first();
       $team = Team::latest()->get();
-      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site' , 'team'));
+      $categories = PortfolioCategory::all();
+      $ports = Portfolio::all();
+      $blogs = Blog::latest()->get();
+      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site' , 'team', 'categories', 'ports', 'blogs'));
+    }
+
+    public function blog($id){
+        $slider=Slider::first();
+        $site = Site::first();
+
+        $blog = Blog::findOrFail($id);
+        return view ('front.blog', compact('blog', 'slider', 'site'));
     }
 }

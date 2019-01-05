@@ -25,7 +25,7 @@ class SliderController extends Controller
                 $extension = $image_tmp->getClientOriginalExtension();
                 $filename = rand(77,777).'.'.$extension;
                 $large_image_path = 'public/adminpanel/uploads/slider/'.$filename;
-              Image::make($image_tmp)->resize(500,1000)->save($large_image_path);
+              Image::make($image_tmp)->save($large_image_path);
                 $slider->image = $filename;
             }
           }

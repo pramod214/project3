@@ -12,6 +12,7 @@
 */
 
 Route::get('/','FrontEndController@index')->name('frontend.index');
+Route::get('/blog-single/{id}', 'FrontEndController@blog')->name('blog');
 
 Auth::routes();
 
@@ -37,7 +38,7 @@ Route::group(['middleware' => ['auth']] ,function(){
   Route::get('/admin/service/view','ServiceController@index')->name('service.view');
   Route::get('/admin/service/edit/{id}','ServiceController@edit')->name('service.edit');
   Route::post('/admin/service/update/{id}','ServiceController@update')->name('service.update');
-  Route::get('/admin/service/delete/{id}','ServiceController@delete')->name('service.delete');
+  Route::get('/admin/delete-service/{id}','ServiceController@delete')->name('service.delete');
 
 //  Personal Skills Route
     Route::get('/admin/personalskills/create','PersonalSkillController@create')->name('personalskills.create');
@@ -67,13 +68,21 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::post('/admin/team/update/{id}','TeamController@update')->name('team.update');
     Route::get('/admin/team/delete/{id}','TeamController@delete')->name('team.delete');
 
-    // Portfolio Routes
-    Route::get('/admin/portfolio/category/create', 'PortfolioController@createCategory')->name('createCategory');
-    Route::post('/admin/portfolio/category/store', 'PortfolioController@storeCategory')->name('storeCategory');
-    Route::get('/admin/portfolio/category/view', 'PortfolioController@viewCategory')->name('viewCategory');
-    Route::get('/admin/portfolio/category/edit/{id}', 'PortfolioController@editCategory')->name('editCategory');
-    Route::post('/admin/portfolio/category/update/{id}', 'PortfolioController@updateCategory')->name('updateCategory');
+    // PortfolioCategory Routes
+    Route::get('/admin/portfolioCategory/category/create', 'PortfolioController@createCategory')->name('createCategory');
+    Route::post('/admin/portfolioCategory/category/store', 'PortfolioController@storeCategory')->name('storeCategory');
+    Route::get('/admin/portfolioCategory/category/view', 'PortfolioController@viewCategory')->name('viewCategory');
+    Route::get('/admin/portfolioCategory/category/edit/{id}', 'PortfolioController@editCategory')->name('editCategory');
+    Route::post('/admin/portfolioCategory/category/update/{id}', 'PortfolioController@updateCategory')->name('updateCategory');
     Route::get('/admin/delete-category/{id}', 'PortfolioController@deleteCategory')->name('deleteCategory');
+
+//    Portfolio Routes
+    Route::get('/admin/portfolio/create','PortfolioCategoryController@createPortfolio')->name('createPortfolio');
+    Route::post('/admin/portfolio/store','PortfolioCategoryController@storePortfolio')->name('storePortfolio');
+    Route::get('/admin/portfolio/view','PortfolioCategoryController@viewPortfolio')->name('viewPortfolio');
+    Route::get('/admin/portfolio/edit/{id}','PortfolioCategoryController@editPortfolio')->name('editPortfolio');
+    Route::post('/admin/portfolio/update/{id}','PortfolioCategoryController@updatePortfolio')->name('updatePortfolio');
+    Route::get('/admin/delete-portfolio/{id}','PortfolioCategoryController@deletePortfolio')->name('deletePortfolio');
 });
 
 

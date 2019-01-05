@@ -13,7 +13,7 @@
         <!-- Footer Social End -->
 
         <!-- Copyright Text Start -->
-        <p class="copyright--text fs--16 ff--primary">Copyright &copy; 2017 <a href="#">Pramod Neupane</a>. All Rights Reserved.</p>
+        <p class="copyright--text fs--16 ff--primary">Copyright &copy; 2019 <a href="{{$about->facebook}}" target="_blank">Pramod Neupane</a>. All Rights Reserved.</p>
         <!-- Copyright Text End -->
     </div>
 </footer>

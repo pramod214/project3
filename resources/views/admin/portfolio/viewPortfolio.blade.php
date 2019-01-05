@@ -4,7 +4,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
-                <h4 class="page-title">Services</h4>
+                <h4 class="page-title">Portoflio</h4>
                 <div class="d-flex align-items-center">
 
                 </div>
@@ -16,7 +16,7 @@
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.dashboard')}}">Home</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
                         </ol>
                     </nav>
                 </div>
@@ -38,7 +38,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">All Services</h4>
+                        <h4 class="card-title">Portfolio</h4>
                         @if(Session::has('flash_message_success'))
                             <div class="alert alert-success alert-block">
                                 <button type="button" class="close" data-dismiss="alert">x</button>
@@ -65,29 +65,35 @@
                                 <tr>
                                     <th>S.N</th>
                                     <th>Name</th>
-                                    <th>Icon</th>
-                                    <th>Body</th>
+                                    <th>Image</th>
+                                    <th>Product Category Id</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($services as $service)
-                                    <tr>
+                                @foreach($portfolio as $value)
+
+                                        <tr>
                                         <td>{{$loop->index +1}}</td>
-                                        <td>{{$service->name}}</td>
-                                        <th>
-                                            <i class="fa {{$service->icon}}"></i>
-                                        </th>
-                                        <th>{{$service->body}}</th>
-                                        <th>
-                                            <a href="{{route('service.edit',$service->id)}}" class="btn btn-primary">
+                                        <td>{{$value->name}}</td>
+                                        <td>{{$value->image}}</td>
+
+                                            <td>
+                                                <span class="badge badge-primary">{{$value->portfolio_categories->name}}</span>
+
+                                        </td>
+
+                                            <td>
+                                            <a href="{{route('editPortfolio',$value->id)}}" class="btn btn-primary">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a rel="{{$service->id}}" rel1="delete-service" href="javascript:" class="btn btn-danger deleteRecord">
+                                            <a rel="{{$value->id}}" rel1="delete-portfolio" href="javascript:" class="btn btn-danger deleteRecord">
                                                 <i class="fa fa-trash"></i>
                                             </a>
-                                        </th>
+                                            </a>
+                                        </td>
                                     </tr>
+
                                 @endforeach
                                 </tbody>
 

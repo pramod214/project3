@@ -93,10 +93,7 @@
                                     </p>
                                 </div>
 
-                                    <div class="action">
-                                        <a href="#" class="btn btn-default">Hire Me</a>
-                                        <a href="#" class="btn btn-white">My Works</a>
-                                    </div>
+
                                 </div>
                                 <!-- Banner Content End -->
                             </div>
@@ -245,158 +242,35 @@
                 <div class="portfolio--filter-menu pb--50">
                     <ul class="nav">
                         <li data-target="*" class="active">All Works</li>
-                        <li data-target="illustration">Illustration</li>
-                        <li data-target="ui-design">UI Design</li>
-                        <li data-target="branding">Branding Design</li>
+                        @foreach($categories as $category)
+                        <li data-target="category{{$category->id}}">{{$category->name}}</li>
+                            @endforeach
                     </ul>
                 </div>
                 <!-- Portfolio Filter Menu End -->
 
                 <!-- Portfolio Items Start -->
                 <div class="portfolio--items row MasonryRow pb--30" data-trigger="gallery_popup">
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="illustration ui-design">
+
+@foreach($ports as $port)
+                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="category{{$port->portfolio_category_id}}">
                         <!-- Portfolio Item Start -->
                         <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/01.jpg')}}" alt="">
+                            <img src="{{asset('public/adminpanel/uploads/portfolio/'.$port->image)}}" alt="">
 
-                            <a href="{{asset('public/frontend/img/portfolio-img/01.jpg')}}" class="caption">
+                            <a href="{{asset('portfolioCategory')}}" class="caption">
                                 <div class="vc--parent">
                                     <div class="vc--child">
-                                        <h3 class="h6">Cover Design</h3>
+                                        <h3 class="h6">{{$port->name}}</h3>
 
-                                        <p>Lorem ipsum dolor sit amet.</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <!-- Portfolio Item End -->
                     </div>
+@endforeach
 
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="ui-design illustration">
-                        <!-- Portfolio Item Start -->
-                        <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/02.jpg')}}" alt="">
-
-                            <a href="{{asset('public/frontend/img/portfolio-img/02.jpg')}}" class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <h3 class="h6">Business Card Design</h3>
-
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Portfolio Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="illustration branding">
-                        <!-- Portfolio Item Start -->
-                        <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/03.jpg')}}" alt="">
-
-                            <a href="{{asset('public/frontend/img/portfolio-img/03.jpg')}}" class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <h3 class="h6">Candleholders Design</h3>
-
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Portfolio Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="branding illustration">
-                        <!-- Portfolio Item Start -->
-                        <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/04.jpg')}}" alt="">
-
-                            <a href="{{asset('public/frontend/img/portfolio-img/04.jpg')}}" class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <h3 class="h6">Branding Design</h3>
-
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Portfolio Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="illustration ui-design">
-                        <!-- Portfolio Item Start -->
-                        <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/01.jpg')}}" alt="">
-
-                            <a href="{{asset('public/frontend/img/portfolio-img/01.jpg')}}" class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <h3 class="h6">Cover Design</h3>
-
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Portfolio Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="ui-design illustration">
-                        <!-- Portfolio Item Start -->
-                        <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/02.jpg')}}" alt="">
-
-                            <a href="{{asset('public/frontend/img/portfolio-img/02.jpg')}}" class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <h3 class="h6">Business Card Design</h3>
-
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Portfolio Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="illustration branding">
-                        <!-- Portfolio Item Start -->
-                        <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/03.jpg')}}" alt="">
-
-                            <a href="{{asset('public/frontend/img/portfolio-img/03.jpg')}}" class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <h3 class="h6">Candleholders Design</h3>
-
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Portfolio Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="branding illustration">
-                        <!-- Portfolio Item Start -->
-                        <div class="portfolio--item">
-                            <img src="{{asset('public/frontend/img/portfolio-img/04.jpg')}}" alt="">
-
-                            <a href="{{asset('public/frontend/img/portfolio-img/04.jpg')}}" class="caption">
-                                <div class="vc--parent">
-                                    <div class="vc--child">
-                                        <h3 class="h6">Branding Design</h3>
-
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Portfolio Item End -->
-                    </div>
                 </div>
                 <!-- Portfolio Items End -->
             </div>
@@ -404,24 +278,8 @@
         <!-- Portfolio Section End -->
 
         <!-- Call To Action Start -->
-        <section class="section pt--100 pb--100" data-bg-parallax="img/call-to-action-img/bg.jpg" data-overlay="0.7">
-            <div class="container">
-                <!-- Call To Action Block Start -->
-                <div class="cta--block text-center">
-                    <div class="title">
-                        <h2 class="h2 text-white">Have an exciting idea for a project?</h2>
-                    </div>
+        <section class="section pt--100 pb--100" data-bg-parallax="img/call-to-action-img/bg.jpg" data-overlay="0.1">
 
-                    <div class="content fs--20 pt--10 text-white">
-                        <p>Lorem ipsum dolor sit amet, elit at debitis, consequuntur labore mollitia ea odit eum.</p>
-                    </div>
-
-                    <div class="action pt--20">
-                        <a href="#" class="btn btn-white">Hire Me Now</a>
-                    </div>
-                </div>
-                <!-- Call To Action Block End -->
-            </div>
         </section>
         <!-- Call To Action End -->
 
@@ -718,7 +576,7 @@
         <!-- Experience Section End -->
 
         <!-- Skills Section Start -->
-        <section id="skills" class="section pt--100 pb--40" data-bg-img="{{asset('public/frontend/img/skills-img/bg.jpg')}}" data-overlay="0.7">
+        <section id="skills" class="section pt--100 pb--40" data-bg-img="{{asset('public/adminpanel/image/bg.jpg')}}" data-overlay="0.5">
             <div class="container">
                 <!-- Section Title Start -->
                 <div class="section--title pb--60 text-center">
@@ -905,13 +763,13 @@
                                         </div>
 
                                         <div class="company ff--primary">
-                                            <p>ThemeLooks</p>
+                                            <p>{{$t->position}}</p>
                                         </div>
 
                                         <div class="social">
                                             <ul class="nav">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="{{$t->facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                             </ul>
                                         </div>
@@ -941,40 +799,8 @@
                 <!-- Section Title End -->
 
                 <div class="row AdjustRow">
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Post Item Start -->
-                        <div class="post--item">
-                            <!-- Post Image Start -->
-                            <div class="post--img">
-                                <a href="blog-details.html"><img src="{{asset('public/frontend/img/blog-img/post-item-01.jpg')}}" alt=""></a>
 
-                                <a href="#" class="date">25 Jan 2017</a>
-                            </div>
-                            <!-- Post Image End -->
-
-                            <!-- Post Title Start -->
-                            <div class="post--title text-uppercase">
-                                <h3 class="h3 fs--22">
-                                    <a href="blog-details.html" class="btn-link">Eiusmod tempor incididunt ut labore et dolor menna aliqua</a>
-                                </h3>
-                            </div>
-                            <!-- Post Title End -->
-
-                            <!-- Post Excerpt Start -->
-                            <div class="post--excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dignissimos molestiae voluptates ullam dolor mollitia quos commodi...</p>
-                            </div>
-                            <!-- Post Excerpt End -->
-
-                            <!-- Post Action Start -->
-                            <div class="post--action text-uppercase">
-                                <a href="blog-details.html" class="btn-link">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                            <!-- Post Action End -->
-                        </div>
-                        <!-- Post Item End -->
-                    </div>
-
+@foreach($blogs as $blog)
                     <div class="col-md-4 col-xs-12 pb--60">
                         <!-- Post Item Start -->
                         <div class="post--item">
@@ -989,7 +815,7 @@
                             <!-- Post Title Start -->
                             <div class="post--title text-uppercase">
                                 <h3 class="h3 fs--22">
-                                    <a href="blog-details.html" class="btn-link">Eiusmod tempor incididunt ut labore et dolor menna aliqua</a>
+                                    <a href="{{route('blog', $blog->id)}}" class="btn-link">{{$blog->title}}</a>
                                 </h3>
                             </div>
                             <!-- Post Title End -->
@@ -1008,40 +834,8 @@
                         </div>
                         <!-- Post Item End -->
                     </div>
+@endforeach
 
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Post Item Start -->
-                        <div class="post--item">
-                            <!-- Post Image Start -->
-                            <div class="post--img">
-                                <a href="blog-details.html"><img src="{{asset('public/frontend/img/blog-img/post-item-03.jpg')}}" alt=""></a>
-
-                                <a href="#" class="date">25 Jan 2017</a>
-                            </div>
-                            <!-- Post Image End -->
-
-                            <!-- Post Title Start -->
-                            <div class="post--title text-uppercase">
-                                <h3 class="h3 fs--22">
-                                    <a href="blog-details.html" class="btn-link">Eiusmod tempor incididunt ut labore et dolor menna aliqua</a>
-                                </h3>
-                            </div>
-                            <!-- Post Title End -->
-
-                            <!-- Post Excerpt Start -->
-                            <div class="post--excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dignissimos molestiae voluptates ullam dolor mollitia quos commodi...</p>
-                            </div>
-                            <!-- Post Excerpt End -->
-
-                            <!-- Post Action Start -->
-                            <div class="post--action text-uppercase">
-                                <a href="blog-details.html" class="btn-link">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                            <!-- Post Action End -->
-                        </div>
-                        <!-- Post Item End -->
-                    </div>
                 </div>
 
                 <!-- Section Footer Start -->
@@ -1053,48 +847,10 @@
         </section>
         <!-- Blog Section End -->
 
-        <!-- Clients Section Start -->
-        <section id="clients" class="section pt--80 pb--20">
-            <div class="container">
-                <div class="row" data-scroll-reveal="group">
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Client Item Start -->
-                        <div class="client--item">
-                            <img src="{{asset('public/frontend/img/brands-img/01.png')}}" alt="" class="center-block">
-                        </div>
-                        <!-- Client Item End -->
-                    </div>
 
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Client Item Start -->
-                        <div class="client--item">
-                            <img src="{{asset('public/frontend/img/brands-img/02.png')}}" alt="" class="center-block">
-                        </div>
-                        <!-- Client Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Client Item Start -->
-                        <div class="client--item">
-                            <img src="{{asset('public/frontend/img/brands-img/03.png')}}" alt="" class="center-block">
-                        </div>
-                        <!-- Client Item End -->
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                        <!-- Client Item Start -->
-                        <div class="client--item">
-                            <img src="{{asset('public/frontend/img/brands-img/04.png')}}" alt="" class="center-block">
-                        </div>
-                        <!-- Client Item End -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Clients Section End -->
 
         <!-- Testimonial Section Start -->
-        <section id="testimonial" class="section pt--90 pb--90" data-bg-parallax="img/testimonial-img/bg.jpg" data-overlay="0.5">
+        <section id="testimonial" class="section pt--90 pb--90" data-bg-parallax="img/testimonial-img/bg.jpg" data-overlay="1">
             <div class="container">
                 <!-- Testimonial Slider Start -->
                 <div class="testimonial--slider owl-carousel" data-owl-dots="true">
