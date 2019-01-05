@@ -45,7 +45,7 @@ class ResumeController extends Controller
         return redirect()->route('viewResume')->with('flash_message_info','Resume Updated Successfully');
     }
 
-    public function delete($id){
+    public function deleteResume($id){
         $r =Resume::findOrFail($id);
         $r->delete();
         return redirect()->route('viewResume')->with('flash_message_danger','Resume Deleted Successfully');

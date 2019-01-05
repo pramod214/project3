@@ -81,7 +81,7 @@
                                                 <i class="fa fa-edit"></i>
                                             </a>
 
-                                            <a id="delete_personalskills" href="{{route('personalskills.delete', $ps->id)}}" class="btn btn-danger">
+                                            <a rel="{{$ps->id}}" rel1="personalskills-delete" href="javascript:" class="btn btn-danger deleteRecord">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
@@ -103,20 +103,33 @@
 
 @section('style')
     <link href="{{asset('public/adminpanel/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('public/css/sweetalert.css')}}">
 @endsection
 
 @section('script')
     <script src="{{asset('public/adminpanel/assets/extra-libs/DataTables/datatables.min.js')}}"></script>
     <script src="{{asset('public/adminpanel/dist/js/pages/datatable/datatable-basic.init.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/js/sweetalert.min.js')}}">
+    </script>
     <script>
         $(document).ready(function () {
-    $("#delete_personalskills").click(function(){
-    if(confirm('Are You Sure to delete')){
-    return true;
-    }
-    return false;
-    });
-    });
+            $(".deleteRecord").click(function(){
+                var id = $(this).attr('rel');
+                var deleteFunction = $(this).attr('rel1');
+                swal({
+                        title: "Are You Sure",
+                        text: "You will not be able to recover this record again",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonClass: "btn-danger",
+                        confirmButtonText: "Yes, Delete it!"
+                    },
+                    function(){
+                        window.location.href="/project3/admin/"+deleteFunction+"/"+id;
+                    }
+                );
+            });
+        });
     </script>
 
 

@@ -83,7 +83,7 @@
                                                 <i class="fa fa-edit"></i>
                                             </a>
 
-                                            <a rel="{{$r->id}}" rel1="delete-update" href="javascript:" class="btn btn-danger deleteRecord">
+                                            <a rel="{{$r->id}}" rel1="delete-resume" href="javascript:" class="btn btn-danger deleteRecord">
                                                 <i class="fa fa-trash"></i>
                                             </a>
 

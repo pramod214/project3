@@ -192,6 +192,7 @@
 
 
 
+
                     </ul>
                 </li>
 
@@ -204,28 +205,45 @@
                         <li class="sidebar-item">
                             <a href="{{route('createResume')}}" class="sidebar-link">
                                 <i class="icon-Record"></i>
-                                <span class="hide-menu"> Create </span>
+                                <span class="hide-menu"> Create Resume </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a href="{{route('viewResume')}}" class="sidebar-link">
                                 <i class="icon-Record"></i>
-                                <span class="hide-menu"> View </span>
+                                <span class="hide-menu"> View Resume </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="icon-Car-Wheel"></i>
+                        <span class="hide-menu">Experience </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse  first-level">
+                        <li class="sidebar-item">
+                            <a href="{{route('createExperience')}}" class="sidebar-link">
+                                <i class="icon-Record"></i>
+                                <span class="hide-menu"> Create Experience </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{route('viewExperience')}}" class="sidebar-link">
+                                <i class="icon-Record"></i>
+                                <span class="hide-menu"> View Experience </span>
                             </a>
                         </li>
 
 
+
+
+
+
+
+
                     </ul>
-                </li>
-
-
-
-
-
-
-
-
-            </ul>
         </nav>
         <!-- End Sidebar navigation -->
     </div>

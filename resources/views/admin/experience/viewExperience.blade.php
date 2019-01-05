@@ -4,7 +4,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
-                <h4 class="page-title">Professional Skills</h4>
+                <h4 class="page-title">View Experience</h4>
                 <div class="d-flex align-items-center">
 
                 </div>
@@ -16,19 +16,14 @@
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.dashboard')}}">Home</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Professional Skills</li>
+                            <li class="breadcrumb-item active" aria-current="page">Experience</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- End Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
+
     <div class="container-fluid">
         <!-- ============================================================== -->
         <!-- Start Page Content -->
@@ -38,7 +33,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Professional Skills</h4>
+                        <h4 class="card-title">View Experience</h4>
                         @if(Session::has('flash_message_success'))
                             <div class="alert alert-success alert-block">
                                 <button type="button" class="close" data-dismiss="alert">x</button>
@@ -65,27 +60,36 @@
                                 <thead>
                                 <tr>
                                     <th>S.N</th>
-                                    <th>Name</th>
-                                    <th>Percentage</th>
+                                    <th>Company Name</th>
+                                    <th>Job Title</th>
+                                    <th>Year</th>
+                                    <th>Address</th>
+                                    <th>Content</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($professional as $ps)
+                                @foreach($experiences as $e)
                                     <tr>
-                                        <td>{{$loop->index +1}}</td>
-                                        <td>{{$ps->name}}</td>
-                                        <td>{{$ps->percentage}}</td>
+                                        <td>{{$loop ->index+1}}</td>
+                                        <td>{{$e->company_name}}</td>
+                                        <td>{{$e->job_title}}</td>
+                                        <td>{{$e->date}}</td>
+                                        <td>{{$e->address}}</td>
+                                        <td>{{$e->body}}</td>
                                         <td>
-                                            <a href="{{route('professionalskills.edit', $ps->id)}}" class="btn btn-primary">
+
+                                            <a href="{{route('editExperience',$e->id)}}" class="btn btn-primary">
                                                 <i class="fa fa-edit"></i>
                                             </a>
 
-                                            <a rel="{{$ps->id}}" rel1="professionalskills-delete"  href="javascript:" class="btn btn-danger deleteRecord">
+                                            <a rel="{{$e->id}}" rel1="delete-experience" href="javascript:" class="btn btn-danger deleteRecord">
                                                 <i class="fa fa-trash"></i>
                                             </a>
+
                                         </td>
                                     </tr>
+
                                 @endforeach
 
                                 </tbody>

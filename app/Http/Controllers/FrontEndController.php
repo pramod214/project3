@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Experience;
 use App\Personalskills;
 use App\Portfolio;
 use App\PortfolioCategory;
@@ -29,7 +30,8 @@ class FrontEndController extends Controller
       $ports = Portfolio::all();
       $blogs = Blog::latest()->get();
       $resumes = Resume::latest()->get();
-      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site' , 'team', 'categories', 'ports', 'blogs' , 'resumes'));
+      $experiences = Experience::latest()->get();
+      return view('front.index', compact('slider','about' , 'services' , 'personalskills' , 'professional' , 'site' , 'team', 'categories', 'ports', 'blogs' , 'resumes' , 'experiences'));
     }
 
     public function blog($id){

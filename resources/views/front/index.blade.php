@@ -360,126 +360,43 @@
 
                     <!-- Timeline Items Start -->
                     <ul class="timeline--items nav">
-                        <li>
-                            <!-- Timeline Item Start -->
-                            <div class="timeline--item">
-                                <div class="icon bg-light">
-                                    <i class="fa fa-briefcase"></i>
+
+                        @foreach($experiences as $experience)
+                            <li>
+                                <!-- Timeline Item Start -->
+                                <div class="timeline--item">
+                                    <div class="icon bg-light">
+                                        <i class="fa fa-briefcase"></i>
+                                    </div>
+
+                                    <table class="table" data-scroll-reveal="bottom">
+                                        <tr>
+                                            <td>
+                                                <p class="date bg-primary">{{$experience->date}}</p>
+
+                                                <div class="bottom">
+                                                    <h4 class="name h6 fw--700">{{$experience->company_name}}</h4>
+
+                                                    <p class="institute ff--primary">{{$experience->job_title}}</p>
+
+                                                    <p class="location fs--12">{{$experience->address}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="content">
+                                                    <p>{{$experience->body}}</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
+                                <!-- Timeline Item End -->
+                            </li>
+                            @endforeach
 
-                                <table class="table" data-scroll-reveal="bottom">
-                                    <tr>
-                                        <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
 
-                                            <div class="bottom">
-                                                <h4 class="name h6 fw--700">Company Name</h4>
-
-                                                <p class="institute ff--primary">Your Job Title</p>
-
-                                                <p class="location fs--12">Tokyo, Japan</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
                             <!-- Timeline Item End -->
-                        </li>
-                        <li>
-                            <!-- Timeline Item Start -->
-                            <div class="timeline--item">
-                                <div class="icon bg-light">
-                                    <i class="fa fa-briefcase"></i>
-                                </div>
 
-                                <table class="table" data-scroll-reveal="bottom">
-                                    <tr>
-                                        <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
-
-                                            <div class="bottom">
-                                                <h4 class="name h6 fw--700">Company Name</h4>
-
-                                                <p class="institute ff--primary">Your Job Title</p>
-
-                                                <p class="location fs--12">Tokyo, Japan</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <!-- Timeline Item End -->
-                        </li>
-                        <li>
-                            <!-- Timeline Item Start -->
-                            <div class="timeline--item">
-                                <div class="icon bg-light">
-                                    <i class="fa fa-briefcase"></i>
-                                </div>
-
-                                <table class="table" data-scroll-reveal="bottom">
-                                    <tr>
-                                        <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
-
-                                            <div class="bottom">
-                                                <h4 class="name h6 fw--700">Company Name</h4>
-
-                                                <p class="institute ff--primary">Your Job Title</p>
-
-                                                <p class="location fs--12">Tokyo, Japan</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <!-- Timeline Item End -->
-                        </li>
-                        <li>
-                            <!-- Timeline Item Start -->
-                            <div class="timeline--item">
-                                <div class="icon bg-light">
-                                    <i class="fa fa-briefcase"></i>
-                                </div>
-
-                                <table class="table" data-scroll-reveal="bottom">
-                                    <tr>
-                                        <td>
-                                            <p class="date bg-primary">2000 - 2013</p>
-
-                                            <div class="bottom">
-                                                <h4 class="name h6 fw--700">Company Name</h4>
-
-                                                <p class="institute ff--primary">Your Job Title</p>
-
-                                                <p class="location fs--12">Tokyo, Japan</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ad, officiis! Saepe amet beatae nihil, tempora, qui odio sapiente aliquid sit quia ipsa quae.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <!-- Timeline Item End -->
-                        </li>
                     </ul>
                     <!-- Timeline Items End -->
                 </div>

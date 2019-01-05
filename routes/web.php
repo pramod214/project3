@@ -46,7 +46,7 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::get('/admin/personalskills/view','PersonalSkillController@view')->name('personalskills.view');
     Route::get('/admin/personalskills/edit/{id}','PersonalSkillController@edit')->name('personalskills.edit');
     Route::post('/admin/personalskills/update/{id}','PersonalSkillController@update')->name('personalskills.update');
-    Route::get('/admin/personalskills/delete/{id}','PersonalSkillController@delete')->name('personalskills.delete');
+    Route::get('/admin/personalskills-delete/{id}','PersonalSkillController@delete')->name('personalskills.delete');
 
 //    ProfessionalSkills Route
     Route::get('/admin/professionalskills/create','ProfessionalSkillController@create')->name('professionalskills.create');
@@ -54,7 +54,7 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::get('/admin/professionalskills/view','ProfessionalSkillController@view')->name('professionalskills.view');
     Route::get('/admin/professionalskills/edit/{id}','ProfessionalSkillController@edit')->name('professionalskills.edit');
     Route::post('/admin/professionalskills/update/{id}','ProfessionalSkillController@update')->name('professionalskills.update');
-    Route::get('/admin/professionalskills/delete/{id}','ProfessionalSkillController@delete')->name('professionalskills.delete');
+    Route::get('/admin/professionalskills-delete/{id}','ProfessionalSkillController@delete')->name('professionalskills.delete');
 
 //    SiteController Route
     Route::get('/admin/site','SiteController@index')->name('site');
@@ -66,7 +66,7 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::get('/admin/team/view','TeamController@view')->name('team.view');
     Route::get('/admin/team/edit/{id}','TeamController@edit')->name('team.edit');
     Route::post('/admin/team/update/{id}','TeamController@update')->name('team.update');
-    Route::get('/admin/team/delete/{id}','TeamController@delete')->name('team.delete');
+    Route::get('/admin/team-delete/{id}','TeamController@delete')->name('team.delete');
 
     // PortfolioCategory Routes
     Route::get('/admin/portfolioCategory/category/create', 'PortfolioController@createCategory')->name('createCategory');
@@ -84,7 +84,7 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::post('/admin/portfolio/update/{id}','PortfolioCategoryController@updatePortfolio')->name('updatePortfolio');
     Route::get('/admin/delete-portfolio/{id}','PortfolioCategoryController@deletePortfolio')->name('deletePortfolio');
 
-    //    Portfolio Routes
+    //    Resume Routes
     Route::get('/admin/resume/create','ResumeController@createResume')->name('createResume');
     Route::post('/admin/resume/store','ResumeController@storeResume')->name('storeResume');
     Route::get('/admin/resume/view','ResumeController@viewResume')->name('viewResume');
@@ -92,6 +92,13 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::post('/admin/resume/update/{id}','ResumeController@updateResume')->name('updateResume');
     Route::get('/admin/delete-resume/{id}','ResumeController@deleteResume')->name('deleteResume');
 
+    //    Experience Routes
+    Route::get('/admin/experience/create','ExperienceController@createExperience')->name('createExperience');
+    Route::post('/admin/experience/store','ExperienceController@storeExperience')->name('storeExperience');
+    Route::get('/admin/experience/view','ExperienceController@viewExperience')->name('viewExperience');
+    Route::get('/admin/experience/edit/{id}','ExperienceController@editExperience')->name('editExperience');
+    Route::post('/admin/experience/update/{id}','ExperienceController@updateExperience')->name('updateExperience');
+    Route::get('/admin/delete-experience/{id}','ExperienceController@deleteExperience')->name('deleteExperience');
 });
 
 
