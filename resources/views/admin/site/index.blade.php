@@ -85,7 +85,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="gmail">Gmail</label>
+                                <label for="gmail">Instagram</label>
                                 <input type="type" class="form-control" id="gmail" name="gmail" value="{{$site->gmail}}">
                             </div>
 

@@ -33,7 +33,7 @@ class AboutController extends Controller
 
       $about->birthdate = $data['birthdate'];
       $about->phone = $data['phone'];
-      $about->details = ucwords(strtolower($data['details']));
+      $about->details = ($data['details']);
       $about->email = $data['email'];
       $about->skype = $data['skype'];
       $about->website = $data['website'];

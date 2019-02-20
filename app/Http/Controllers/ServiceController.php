@@ -44,7 +44,7 @@ class ServiceController extends Controller
     }
 
     public function delete($id){
-        $service = Service::FindOrfail($id);
+        $service = Service::findOrFail($id);
         $service->delete();
         return redirect()->route('service.view')->with('flash_message_danger','Service has been Deleted');
     }

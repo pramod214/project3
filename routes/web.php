@@ -14,10 +14,17 @@
 Route::get('/','FrontEndController@index')->name('frontend.index');
 Route::get('/blog-single/{id}', 'FrontEndController@blog')->name('blog');
 
+Route::match(['get','post'],'/contact/','ContactController@contact')->name('front.contact');
+Route::get('/download','PdfController@pdf')->name('resume');
+
+Route::post('/sent-contact-mail','FrontEndController@sendContactMail')->name('sendContactMail');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::match(['get','post'],'/adminLogin','AdminController@login')->name('admin.login');
+
 
 Route::group(['middleware' => ['auth']] ,function(){
   Route::get('/admindashboard','AdminController@dashboard')->name('admin.dashboard');
@@ -99,6 +106,10 @@ Route::group(['middleware' => ['auth']] ,function(){
     Route::get('/admin/experience/edit/{id}','ExperienceController@editExperience')->name('editExperience');
     Route::post('/admin/experience/update/{id}','ExperienceController@updateExperience')->name('updateExperience');
     Route::get('/admin/delete-experience/{id}','ExperienceController@deleteExperience')->name('deleteExperience');
+
+//    Contact View
+    Route::get('/contact/view','ContactController@viewContact')->name('contact.view');
+    Route::get('/admin/delete-contact/{id}/','ContactController@deleteContact')->name('contact.delete');
 });
 
 

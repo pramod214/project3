@@ -28,7 +28,7 @@
                         <a href="{{route('frontend.index')}}" class="navbar-brand">
                             <span class="vc--parent">
                                 <span class="vc--child">
-                                    <img src="{{asset('public/frontend/img/logo.png')}}" alt="">
+                                    <img src="" alt="">
                                 </span>
                             </span>
                         </a>
@@ -40,23 +40,12 @@
                         <ul class="header--nav-links ff--primary nav navbar-right">
                             <li class="active"><a href="#header" data-trigger="scroll">Home</a></li>
                             <li><a href="#aboutme" data-trigger="scroll">About Me</a></li>
-                            <li><a href="#services" data-trigger="scroll">Services</a></li>
+                            {{--<li><a href="#services" data-trigger="scroll">Services</a></li>--}}
                             <li><a href="#portfolio" data-trigger="scroll">Portfolio</a></li>
                             <li><a href="#skills" data-trigger="scroll">Skills</a></li>
                             <li><a href="#blog" data-trigger="scroll">Blog</a></li>
                             <li><a href="#contact" data-trigger="scroll">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages<span class="caret"></span></a>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html">Home Page</a></li>
-                                    <li><a href="blog.html">Blog Page</a></li>
-                                    <li><a href="blog-details.html">Blog Details Page</a></li>
-                                    <li><a href="contact.html">Contact Page</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon Page</a></li>
-                                </ul>
-                            </li>
                         </ul>
                         <!-- Header Nav Links End -->
                     </div>
@@ -130,7 +119,8 @@
                             </div>
 
                             <div class="details pt--30 text-dark">
-                                <p>{{$about->details}}</p>
+                                <p >{!! htmlspecialchars_decode($about->details)!!}</p>
+
                             </div>
 
 
@@ -171,7 +161,7 @@
                                                 <i class="fa fa-globe"></i>
                                                 <span>Website</span>
                                             </th>
-                                            <td><a href="www.johndoe.com" class="btn-link">{{$about->website}}</a></td>
+                                            <td><a href="" class="btn-link">{{$about->website}}</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -184,50 +174,20 @@
                                     <li><a href="{{$about->gmail}}" target="_blank"><span class="fa fa-google-plus"></span></a></li>
                                     <li><a href="{{$about->linkedin}}" target="_blank"><span class="fa fa-linkedin"></span></a></li>
                                 </ul>
+                                <div class="action pt--60">
+                                    <a href="https://drive.google.com/open?id=1npigHtBDRM3GmskimFLMHnRQ7RWB7Yzl" target="_blank" class="btn btn-default">Download Resume</a>
+                                </div>
                             </div>
+
 
 
                         <!-- About Block End -->
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         <!-- About Section End -->
-
-        <!-- Services Section Start -->
-        <section id="services" class="section pt--100 pb--40 bg-light">
-            <div class="container">
-                <!-- Section Title Start -->
-                <div class="section--title pb--60 text-center">
-                    <h2 class="h2 text-uppercase">Services I Offer</h2>
-                </div>
-                <!-- Section Title End -->
-
-                <div class="row AdjustRow" data-scroll-reveal="group">
-
-                    @foreach($services as $service)
-                        <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
-                            <!-- Service Block Start -->
-                            <div class="service--block">
-                                <div class="icon">
-                                    <i class="fa {{$service->icon}}"></i>
-                                </div>
-
-                                <div class="title">
-                                    <h3 class="h4">{{$service->name}}</h3>
-                                </div>
-
-                                <div class="desc">
-                                    <p>{{$service->body}}</p>
-                                </div>
-                            </div>
-                            <!-- Service Block End -->
-                        </div>
-
-                    @endforeach
-                </div>
-        </section>
-        <!-- Services Section End -->
 
         <!-- Portfolio Section Start -->
         <section id="portfolio" class="section pt--100 pb--40">
@@ -243,7 +203,7 @@
                     <ul class="nav">
                         <li data-target="*" class="active">All Works</li>
                         @foreach($categories as $category)
-                        <li data-target="category{{$category->id}}">{{$category->name}}</li>
+                        <li data-target="{{$category->id}}">{{$category->name}}</li>
                             @endforeach
                     </ul>
                 </div>
@@ -253,12 +213,12 @@
                 <div class="portfolio--items row MasonryRow pb--30" data-trigger="gallery_popup">
 
 @foreach($ports as $port)
-                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="category{{$port->portfolio_category_id}}">
+                    <div class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="{{$port->portfolio_category_id}}">
                         <!-- Portfolio Item Start -->
                         <div class="portfolio--item">
                             <img src="{{asset('public/adminpanel/uploads/portfolio/'.$port->image)}}" alt="">
 
-                            <a href="{{asset('portfolioCategory')}}" class="caption">
+                            <a href="{{asset('public/adminpanel/uploads/portfolio/'.$port->image)}}" class="caption">
                                 <div class="vc--parent">
                                     <div class="vc--child">
                                         <h3 class="h6">{{$port->name}}</h3>
@@ -275,14 +235,7 @@
                 <!-- Portfolio Items End -->
             </div>
         </section>
-        <!-- Portfolio Section End -->
-
-        <!-- Call To Action Start -->
-        <section class="section pt--100 pb--100" data-bg-parallax="img/call-to-action-img/bg.jpg" data-overlay="0.1">
-
-        </section>
-        <!-- Call To Action End -->
-
+        <
         <!-- Resume Section Start -->
         <section id="resume" class="section pt--100 pb--100">
             <div class="container">
@@ -394,9 +347,6 @@
                             </li>
                             @endforeach
 
-
-                            <!-- Timeline Item End -->
-
                     </ul>
                     <!-- Timeline Items End -->
                 </div>
@@ -464,110 +414,7 @@
                 </div>
             </div>
         </section>
-        <!-- Skills Section End -->
 
-        <!-- Pricing Section Start -->
-        <section id="pricing" class="section pt--100 pb--40 bg-light">
-            <div class="container">
-                <!-- Section Title Start -->
-                <div class="section--title pb--60 text-center">
-                    <h2 class="h2 text-uppercase">Pricing Plan</h2>
-                </div>
-                <!-- Section Title End -->
-
-                <div class="row AdjustRow">
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Pricing Item Start -->
-                        <div class="pricing--item">
-                            <div class="pricing--header bg-primary">
-                                <div class="plan">
-                                    <h3 class="h3 text-primary">Starter</h3>
-                                </div>
-
-                                <div class="price ff--primary">
-                                    <p>Form <span>$50</span></p>
-                                </div>
-                            </div>
-
-                            <div class="pricing--features fs--16 ff--primary">
-                                <ul class="nav">
-                                    <li>Web Design Service</li>
-                                    <li>Web Development Service</li>
-                                    <li>Graphic Design Service</li>
-                                    <li>SEO Service</li>
-                                </ul>
-                            </div>
-
-                            <div class="pricing--action">
-                                <a href="#" class="btn btn-primary">Order Now</a>
-                            </div>
-                        </div>
-                        <!-- Pricing Item End -->
-                    </div>
-
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Pricing Item Start -->
-                        <div class="pricing--item">
-                            <div class="pricing--header bg-primary">
-                                <div class="plan">
-                                    <h3 class="h3 text-primary">Starter</h3>
-                                </div>
-
-                                <div class="price ff--primary">
-                                    <p>Form <span>$150</span></p>
-                                </div>
-                            </div>
-
-                            <div class="pricing--features fs--16 ff--primary">
-                                <ul class="nav">
-                                    <li>Web Design Service</li>
-                                    <li>Web Development Service</li>
-                                    <li>Graphic Design Service</li>
-                                    <li>SEO Service</li>
-                                </ul>
-                            </div>
-
-                            <div class="pricing--action">
-                                <a href="#" class="btn btn-primary">Order Now</a>
-                            </div>
-                        </div>
-                        <!-- Pricing Item End -->
-                    </div>
-
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Pricing Item Start -->
-                        <div class="pricing--item">
-                            <div class="pricing--header bg-primary">
-                                <div class="plan">
-                                    <h3 class="h3 text-primary">Starter</h3>
-                                </div>
-
-                                <div class="price ff--primary">
-                                    <p>Form <span>$250</span></p>
-                                </div>
-                            </div>
-
-                            <div class="pricing--features fs--16 ff--primary">
-                                <ul class="nav">
-                                    <li>Web Design Service</li>
-                                    <li>Web Development Service</li>
-                                    <li>Graphic Design Service</li>
-                                    <li>SEO Service</li>
-                                </ul>
-                            </div>
-
-                            <div class="pricing--action">
-                                <a href="#" class="btn btn-primary">Order Now</a>
-                            </div>
-                        </div>
-                        <!-- Pricing Item End -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Pricing Section End -->
-
-        <!-- Team Section Start -->
         <section id="team" class="section pt--100 pb--40">
             <div class="container">
                 <!-- Section Title Start -->
@@ -582,7 +429,7 @@
                         <!-- Team Member Item Start -->
                         <div class="team--member" data-scroll-reveal="bottom">
                             <div class="img">
-                                <img src="{{asset('public/adminpanel/uploads/team/'.$t->image)}}" alt="">
+                                <img src="{{asset('public/adminpanel/uploads/team/'.$t->image)}}" alt=""  >
                             </div>
 
                             <div class="caption">
@@ -617,121 +464,7 @@
                 </div>
             </div>
         </section>
-        <!-- Team Section End -->
 
-        <!-- Blog Section Start -->
-        <section id="blog" class="section pt--100 pb--40 bg-light">
-            <div class="container">
-                <!-- Section Title Start -->
-                <div class="section--title pb--60 text-center">
-                    <h2 class="h2 text-uppercase">Blog &amp; News</h2>
-                </div>
-                <!-- Section Title End -->
-
-                <div class="row AdjustRow">
-
-@foreach($blogs as $blog)
-                    <div class="col-md-4 col-xs-12 pb--60">
-                        <!-- Post Item Start -->
-                        <div class="post--item">
-                            <!-- Post Image Start -->
-                            <div class="post--img">
-                                <a href="blog-details.html"><img src="{{asset('public/frontend/img/blog-img/post-item-02.jpg')}}" alt=""></a>
-
-                                <a href="#" class="date">25 Jan 2017</a>
-                            </div>
-                            <!-- Post Image End -->
-
-                            <!-- Post Title Start -->
-                            <div class="post--title text-uppercase">
-                                <h3 class="h3 fs--22">
-                                    <a href="{{route('blog', $blog->id)}}" class="btn-link">{{$blog->title}}</a>
-                                </h3>
-                            </div>
-                            <!-- Post Title End -->
-
-                            <!-- Post Excerpt Start -->
-                            <div class="post--excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dignissimos molestiae voluptates ullam dolor mollitia quos commodi...</p>
-                            </div>
-                            <!-- Post Excerpt End -->
-
-                            <!-- Post Action Start -->
-                            <div class="post--action text-uppercase">
-                                <a href="blog-details.html" class="btn-link">Read More<i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                            <!-- Post Action End -->
-                        </div>
-                        <!-- Post Item End -->
-                    </div>
-@endforeach
-
-                </div>
-
-                <!-- Section Footer Start -->
-                <div class="section--footer text-center pb--60">
-                    <a href="blog.html" class="btn btn-primary">View All Posts</a>
-                </div>
-                <!-- Section Footer End -->
-            </div>
-        </section>
-        <!-- Blog Section End -->
-
-
-
-        <!-- Testimonial Section Start -->
-        <section id="testimonial" class="section pt--90 pb--90" data-bg-parallax="img/testimonial-img/bg.jpg" data-overlay="1">
-            <div class="container">
-                <!-- Testimonial Slider Start -->
-                <div class="testimonial--slider owl-carousel" data-owl-dots="true">
-                    <!-- Testimonial Item Start -->
-                    <div class="testimonial--item text-white">
-                        <div class="icon">
-                            <i class="fa fa-comments"></i>
-                        </div>
-
-                        <blockquote>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-
-                            <footer>James Stone @ Company Inc.</footer>
-                        </blockquote>
-                    </div>
-                    <!-- Testimonial Item End -->
-
-                    <!-- Testimonial Item Start -->
-                    <div class="testimonial--item text-white">
-                        <div class="icon">
-                            <i class="fa fa-comments"></i>
-                        </div>
-
-                        <blockquote>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-
-                            <footer>Roger Martin @ Company Inc.</footer>
-                        </blockquote>
-                    </div>
-                    <!-- Testimonial Item End -->
-
-                    <!-- Testimonial Item Start -->
-                    <div class="testimonial--item text-white">
-                        <div class="icon">
-                            <i class="fa fa-comments"></i>
-                        </div>
-
-                        <blockquote>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-
-                            <footer>Wayne Stone @ Company Inc.</footer>
-                        </blockquote>
-                    </div>
-                    <!-- Testimonial Item End -->
-                </div>
-                <!-- Testimonial Slider End -->
-            </div>
-        </section>
-        <!-- Testimonial Section End -->
-
-        <!-- Contact Section Start -->
         <section id="contact" class="section pt--100 pb--40 bg-light">
             <div class="container">
                 <!-- Section Title Start -->
@@ -797,14 +530,20 @@
                 </div>
 
                 <!-- Contact Form Start -->
-                <div class="contact--form pb--60" data-form="ajax">
+                <div class="contact--form pb--60">
                     <div class="title text-center text-uppercase pb--30">
-                        <h3 class="h4">You can drop me a line here</h3>
+                        <h3 class="h4">You can drop me a message here</h3>
+                        @if(Session::has('flash_message_success'))
+                            <div class="alert alert-success" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="text-danger">x</span></button>
+                                <strong class="text-info">{!! session('flash_message_success') !!}</strong>
+                            </div>
+                        @endif
                     </div>
 
-                    <form action="forms/contact-form.php">
+                    <form action="{{route('sendContactMail')}}" method="post">
+                        @csrf
                         <div class="status"></div>
-
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -814,7 +553,7 @@
 
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="email" name="email" placeholder="E-mail *" class="form-control" required>
+                                    <input type="text" name="email" placeholder="E-mail *" class="form-control" required>
                                 </div>
                             </div>
 
@@ -831,7 +570,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-block btn-primary">Send Message</button>
+                                <input type="submit" class="btn btn-block btn-primary" value="Send Message">
                             </div>
                         </div>
                     </form>
@@ -843,19 +582,19 @@
 
       @include('front.includes.footer')
     </div>
-    <!-- Wrapper End -->
 
-    <!-- Back To Top Button Start -->
     <div id="backToTop">
         <a href="#" class="btn btn-default active"><i class="fa fa-long-arrow-up"></i></a>
     </div>
-    <!-- Back To Top Button End -->
+@include('front.includes.script')
 
-    <!-- ==== Plugins Bundle ==== -->
-    <script src="{{asset('public/frontend/js/plugins.min.js')}}"></script>
+@section('script')
+    <script>
+        @if(Session::has('success'))
+        toastr.success('{{Session::get('success')}}')
+        @endif
+    </script>
 
-    <!-- ==== Main Script ==== -->
-    <script src="{{asset('public/frontend/js/main.js')}}"></script>
-
+    @endsection
 </body>
 </html>

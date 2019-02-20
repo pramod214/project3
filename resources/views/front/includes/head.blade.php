@@ -31,6 +31,7 @@
 
     <!-- ==== Custom Stylesheet ==== -->
     <link rel="stylesheet" href="{{asset('public/frontend/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/toastr/toastr.css')}}">
 
 
 </head>

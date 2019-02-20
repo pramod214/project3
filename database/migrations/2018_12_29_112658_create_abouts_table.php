@@ -17,7 +17,7 @@ class CreateAboutsTable extends Migration
           $table->increments('id');
           $table->string('birthdate');
           $table->string('phone');
-          $table->string('details');
+          $table->text('details');
           $table->string('email');
 
           $table->string('skype')->nullable();

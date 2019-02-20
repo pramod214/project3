@@ -16,7 +16,7 @@
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.dashboard')}}">Home</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
+                            <li class="breadcrumb-item active" aria-current="page">View Contact</li>
                         </ol>
                     </nav>
                 </div>
@@ -65,36 +65,29 @@
                                 <tr>
                                     <th>S.N</th>
                                     <th>Name</th>
-                                    <th>Image</th>
-                                    <th>Product Category Id</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($portfolio as $value)
-
-                                        <tr>
-                                        <td>{{$loop->index +1}}</td>
-                                        <td>{{$value->name}}</td>
-                                        <td>{{$value->image}}</td>
-
-                                            <td>
-                                                <span class="badge badge-primary">{{$value->portfolio_category_id}}</span>
-
-                                        </td>
-
-                                            <td>
-                                            <a href="{{route('editPortfolio',$value->id)}}" class="btn btn-primary">
-                                                <i class="fa fa-edit"></i>
-                                            </a>
-                                            <a rel="{{$value->id}}" rel1="delete-portfolio" href="javascript:" class="btn btn-danger deleteRecord">
+                                @foreach($contacts as $contact)
+                                    <tr>
+                                        <td>{{$loop -> index +1}}</td>
+                                        <td>{{$contact->name}}</td>
+                                        <td>{{$contact->email}}</td>
+                                        <td>{{$contact->subject}}</td>
+                                        <td>{{$contact->message}}</td>
+                                        <td>
+                                            <a rel="{{$contact->id}}" rel1="delete-contact" href="javascript:" class="btn btn-danger deleteRecord">
                                                 <i class="fa fa-trash"></i>
-                                            </a>
                                             </a>
                                         </td>
                                     </tr>
 
-                                @endforeach
+
+                                    @endforeach
                                 </tbody>
 
                             </table>
@@ -139,5 +132,5 @@
             });
         });
     </script>
+    @endsection
 
-@endsection

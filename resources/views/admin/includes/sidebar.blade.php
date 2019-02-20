@@ -236,14 +236,17 @@
                             </a>
                         </li>
 
+                    </ul></li>
 
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('contact.view')}}" aria-expanded="false">
+                        <i class="mdi mdi-content-paste"></i>
+                        <span class="hide-menu">Contact View</span>
+                    </a>
+                </li>
 
+            </ul>
 
-
-
-
-
-                    </ul>
         </nav>
         <!-- End Sidebar navigation -->
     </div>
